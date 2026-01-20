@@ -59,9 +59,9 @@ All readings are also organized in a [Zotero Group Library](https://www.zotero.o
 
 The lectures and classes feature examples in [Jupyter](https://jupyter.org/) Notebooks for use on [Google Colab](https://colab.google/).
 
-### Local Setup (Optional)
+### Package Management
 
-For local development, this course uses [`uv`](https://github.com/astral-sh/uv) for Python package management. To get started:
+This course uses [`uv`](https://docs.astral.sh/uv/) for Python package management. To get started:
 
 1. Install `uv` (if not already installed):
    ```bash
@@ -72,15 +72,6 @@ For local development, this course uses [`uv`](https://github.com/astral-sh/uv) 
    ```bash
    uv sync
    ```
-
-3. Run Jupyter or Python scripts:
-   ```bash
-   uv run jupyter lab
-   # or
-   uv run python script.py
-   ```
-
-The project uses `pyproject.toml` to manage all dependencies. See the [uv documentation](https://docs.astral.sh/uv/) for more details. 
 
 ## Prerequisites
 
