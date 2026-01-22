@@ -94,23 +94,26 @@ Linear Algebra, calculus, probability theory and statistics, as well as programm
 -   Linear Regression: Minimizing mean-squared error using matrix notation [@prince2023, Chapter 2]
 -   Optimization: Gradient descent, stochastic gradient descent, Adam optimizer [@prince2023, Chapter 6]
 -   Model Evaluation: Bias-variance tradeoff and overfitting, training/test set and cross-validation, double descent [@prince2023, Chapter 8]
+-   Prediction vs. inference: causal ML topics (e.g., DML, causal forests) are covered in D300 
 -   sklearn
 -   PyTorch
 -   Introduction to Research Project  
+-   Economic application: house price prediction, earnings forecasts, etc.
 
 
 ### Classification and Logistic Regression - Week 3 (7 February 2026)
 
 -   Multinomial Logit and Discrete Choice 
 -   Loss functions [@prince2023, Chapter 5]
--   Regularization: Explicit and implicit regularization, dropout, ensemble methods, transfer learning [@prince2023, Chapter 9]
+-   Regularization: Explicit and implicit regularization, dropout, transfer learning [@prince2023, Chapter 9]
+-   CART (Classification and Regression Trees) and ensemble methods for tabular data: bagging (random forests) and gradient boosting (XGBoost)
+-   Model interpretability: Shapley values and SHAP for feature attribution
+-   Economic application: discrete choice, credit/default risk
 
 <!--
 #### Topics Not Currently Covered
 
 -   Support Vector Machines (SVM)
--   Decision/classification trees
--   Ensemble Methods: Boosting and bagging, random forests, gradient boosting machines
 -   Kernel ridge regression
 -   Gaussian Process Models
 -->
@@ -127,14 +130,16 @@ Linear Algebra, calculus, probability theory and statistics, as well as programm
 ### Representation Learning and Natural Language Processing (NLP) - Week 5 (21 February 2026)
 
 -   Convolutional neural networks (CNN) [@prince2023, Chapter 10]
+-   Sequence and time series models: Recurrent neural networks (RNN), 
+Hopfield network, LSTM
 -   Transformers: Self-attention mechanism, encoder-decoder architecture [@prince2023, Chapter 12.1-12.6]
 -   Large Language Models
 -   Post-training: Finetuning and adaptation (e.g., QLoRA)
+-   Economic application: text-as-data for empirical microeconomics (cf. D001 course)
 
 <!--
 #### Topics Not Currently Covered
 
--   Sequence and time series modeling: Recurrent neural networks (RNN), Hopfield network, LSTM
 -   Word embedding (e.g., Word2Vec)
 -   Graph Neural Networks (GNN)
 -->
@@ -146,16 +151,17 @@ Linear Algebra, calculus, probability theory and statistics, as well as programm
 
 -   Generative Pre-trained Transformers (GPT) [@prince2023, Chapter 12.7-12.10]
 -   Unsupervised Learning [@prince2023, Chapter 14]
+-   Clustering and dimensionality reduction: K-means, PCA
 -   Variational Autoencoders (VAE) [@prince2023, Chapter 17]
 -   Diffusion Models [@prince2023, Chapter 18]
+-   Economic application: marketing
 
 <!--
 #### Topics Not Currently Covered
 
 - Unsupervised Learning: 
   - Gaussian Mixture Models, Expectation Maximization (vs gradient descent)
-  - Clustering (K-means)
-  - Dimensionality reduction (PCA, ICA)
+  - Dimensionality reduction (ICA)
 -   Generative Adversarial Networks (GANs) [@prince2023, Chapter 15]
 -->
 
@@ -164,17 +170,18 @@ Linear Algebra, calculus, probability theory and statistics, as well as programm
 
 ### Reinforcement Learning - Week 7 (7 March 2026)
 
+-   Multi-armed bandits and bandit gradient algorithm as stochastic gradient descent [@sutton2018, Section 2.8]
 -   Reinforcement Learning: Markov Decision Processes (MDP), policies, value functions [@prince2023, Chapter 19]
 -   Bellman equations
 -   Q-Learning and Deep Q-Networks
 -   Proximal Policy Optimization (PPO)
+-   Reinforcement Learning from Human Feedback (RLHF): Alignment of Large Language Models
+-   Economic application: online experimentation, multi-armed bandit testing, ad allocation, and dynamic pricing
 
 <!--
 #### Topics Not Currently Covered
 
 -   Hidden Markov Models (HMM)
--   Multi-armed bandit testing
--   Bandit Gradient Algorithm as Stochastic Gradient Descent
 -   @silver2016
 -   @schrittwieser2020
 -   Inverse Reinforcement Learning
@@ -183,11 +190,10 @@ Linear Algebra, calculus, probability theory and statistics, as well as programm
 
 ## Part 4: ML and Economics
 
-### Synthesis: Information-Theoretic Lens - Week 8 (14 March 2026)
+### Synthesis: Information-Theoretic Principles - Week 8 (14 March 2026)
 
 -   Review and synthesis: The information-theoretic lens as a unifying principle [@alemi2024]
 -   Unified view of supervised learning, unsupervised learning, and representation learning through KL divergence minimization
--   Reinforcement Learning from Human Feedback (RLHF): Alignment of Large Language Models
 
 ### ML and Economics - Week 9 (21 March 2026)
 
