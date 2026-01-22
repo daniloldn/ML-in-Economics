@@ -119,39 +119,41 @@ Linear Algebra, calculus, probability theory and statistics, as well as programm
 -->
 
 
-### Artificial Neural Networks and Deep Learning - Week 4 (14 February 2026)
+## Part 2: Deep Learning 
+
+### Artificial Neural Networks: Shallow to Deep - Week 4 (14 February 2026)
 
 -   Nonlinear models (e.g., GLM)
 -   Shallow neural networks  [@prince2023, Chapter 3]
 -   Deep feedforward neural networks (multi-layer perceptrons) [@prince2023, Chapter 4]
 -   Backpropagation [@prince2023, Chapter 7]
-
-
-### Representation Learning and Natural Language Processing (NLP) - Week 5 (21 February 2026)
-
 -   Convolutional neural networks (CNN) [@prince2023, Chapter 10]
--   Sequence and time series models: Recurrent neural networks (RNN), 
-Hopfield network, LSTM
+
+
+
+
+### Representation Learning & NLP: Transformers and Foundation Models - Week 5 (21 February 2026)
+
+-   Sequence and time series models: Recurrent neural networks (RNN), Hopfield network, LSTM
+-   Word embedding (e.g., Word2Vec)
 -   Transformers: Self-attention mechanism, encoder-decoder architecture [@prince2023, Chapter 12.1-12.6]
--   Large Language Models
+-   Generative Pre-trained Transformers (GPT) [@prince2023, Chapter 12.7-12.10]
+-   Large Language Models (LLM) 
 -   Post-training: Finetuning and adaptation (e.g., QLoRA)
 -   Economic application: text-as-data for empirical microeconomics (cf. D001 course)
 
 <!--
 #### Topics Not Currently Covered
 
--   Word embedding (e.g., Word2Vec)
 -   Graph Neural Networks (GNN)
 -->
 
 
-## Part 2: Unsupervised Machine Learning
+### Unsupervised Learning & Generative Models - Week 6 (28 February 2026)
 
-### Generative AI - Week 6 (28 February 2026)
 
--   Generative Pre-trained Transformers (GPT) [@prince2023, Chapter 12.7-12.10]
 -   Unsupervised Learning [@prince2023, Chapter 14]
--   Clustering and dimensionality reduction: K-means, PCA
+-   Clustering and dimensionality reduction: K-means, PCA (latent space intuition)
 -   Variational Autoencoders (VAE) [@prince2023, Chapter 17]
 -   Diffusion Models [@prince2023, Chapter 18]
 -   Economic application: marketing
