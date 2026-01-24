@@ -253,7 +253,7 @@ https://github.com/NeuromatchAcademy/course-content-dl/tree/main/tutorials/W1D1_
 <section id="shannon-entropy" class="slide level2">
 <h2>Shannon Entropy</h2>
 <p>Entropy is a measure of uncertainty <span class="math display">\[ H(X) = - \sum_x p(x) \log p(x) = \log(N) - D_{KL}(p(x)||p_{unif}(x))\]</span></p>
-<p>In continous case differential entropy (Shannon) <span class="math display">\[ h(X) = - \int_{-\infty}^{\infty} p(x) \log p(x) dx\]</span> or better limiting density of discrete points (Jaynes) <span class="math display">\[ H(X) = \log(N) - D_{KL}(p(x) || m(x))\]</span> with <span class="math inline">\(m(x)\)</span> the limiting density of discrete points.</p>
+<p>In continous case differential entropy (Shannon) <span class="math display">\[ h(X) = - \int_{-\infty}^{\infty} p(x) \log p(x) dx\]</span> not invariant, so better with limiting density <span class="math inline">\(m(x)\)</span> of discrete points (Jaynes) <span class="math display">\[ H(X) = - \int_{-\infty}^{\infty} p(x) \log \frac{p(x)}{m(x)} dx = \log(N) - D_{KL}(p(x) || m(x))\]</span></p>
 <!-- Cross-entropy $H(p,q)=H(p)+D_{KL}(p||q)$ -->
 </section>
 <section id="mutual-information" class="slide level2">
