@@ -258,11 +258,8 @@ All elements are essential and constitute 100% weighting.
 Attendance
 : Regular attendance at lectures and classes is mandatory.
 
-Plagiarism
-: All work submitted must be original. Plagiarism will result in serious academic penalties in line with University policy.
-
-Use of Large Language Models
-: Submitted work must not be direct output from Large Language Models such as ChatGPT, and may be checked accordingly.
+Academic Misconduct and AI
+: All work submitted must strictly adhere to the University's [Plagiarism and Academic Misconduct Policies](https://www.educationalpolicy.admin.cam.ac.uk/plagiarism-and-academic-misconduct), including on the use of [Artificial Intelligence](https://www.educationalpolicy.admin.cam.ac.uk/plagiarism-and-academic-misconduct/artificial-intelligence-ai). Failure to do so may result in serious disciplinary consequences.
 
 Late Submissions
 : Assignments submitted after the deadline will be penalized (unless an extension is granted in advance) by 10% per 24 hours (additively, i.e. a submission received 49 hours after the deadline will receive 70% of full marks). 
