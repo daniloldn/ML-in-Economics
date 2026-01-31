@@ -340,7 +340,7 @@ v_{t+1} &amp;\leftarrow \gamma v_t + (1-\gamma) \left(\sum_{i\in B_t} \nabla_{\p
 </section>
 <section id="setup" class="slide level2">
 <h2>Setup</h2>
-<div id="9e077cea" class="cell" data-execution_count="1">
+<div id="196f5a71" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> torch</span>
 <span id="cb1-2"><a href=""></a>torch.manual_seed(<span class="dv">42</span>)  <span class="co"># for reproducibility (same results across runs)</span></span>
 <span id="cb1-3"><a href=""></a><span class="co"># Choose where to run: MPS (Apple Silicon), CUDA (NVIDIA GPU), or CPU.</span></span>
@@ -359,7 +359,7 @@ v_{t+1} &amp;\leftarrow \gamma v_t + (1-\gamma) \left(\sum_{i\in B_t} \nabla_{\p
 </section>
 <section id="tensors" class="slide level2">
 <h2>Tensors</h2>
-<div id="135382f0" class="cell" data-execution_count="2">
+<div id="e79235b7" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="im">from</span> sklearn <span class="im">import</span> datasets <span class="im">as</span> sk_datasets</span>
 <span id="cb2-2"><a href=""></a>X, y <span class="op">=</span> sk_datasets.load_diabetes(return_X_y<span class="op">=</span><span class="va">True</span>, as_frame<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb2-3"><a href=""></a>X <span class="op">=</span> X.iloc[<span class="op">-</span><span class="dv">200</span>:]</span>
@@ -377,7 +377,7 @@ cpu</code></pre>
 </section>
 <section id="linear-regression-closed-form-solution" class="slide level2">
 <h2>Linear Regression: Closed-form Solution</h2>
-<div id="cf67528d" class="cell" data-execution_count="3">
+<div id="91329386" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a>X_with_intercept <span class="op">=</span> torch.cat([torch.ones(X_train.shape[<span class="dv">0</span>], <span class="dv">1</span>, dtype<span class="op">=</span>X_train.dtype), X_train], dim<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb4-2"><a href=""></a>solution <span class="op">=</span> torch.linalg.lstsq(X_with_intercept, y_train.unsqueeze(<span class="dv">1</span>)) <span class="co"># lstsq expects RHS shape (n, 1) for single output</span></span>
 <span id="cb4-3"><a href=""></a>coefficients <span class="op">=</span> solution.solution.flatten()   <span class="co"># length 11: intercept, then 10 feature coefs</span></span>
@@ -391,7 +391,7 @@ Two coefficients (e.g. bmi, bp): 546.1898803710938 408.4148864746094</code></pre
 </section>
 <section id="linear-regression-numerical-solution" class="slide level2">
 <h2>Linear Regression: Numerical Solution</h2>
-<div id="19be8eb7" class="cell" data-execution_count="4">
+<div id="cdd3f671" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="im">from</span> torch <span class="im">import</span> nn</span>
 <span id="cb6-2"><a href=""></a><span class="im">import</span> torch.optim <span class="im">as</span> optim</span>
 <span id="cb6-3"><a href=""></a></span>
@@ -449,7 +449,7 @@ linear.bias: [151.89984]</code></pre>
 </section>
 <section id="datasets" class="slide level2">
 <h2>Datasets</h2>
-<div id="7e3e076e" class="cell" data-execution_count="5">
+<div id="a929d4a8" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a><span class="im">from</span> torchvision <span class="im">import</span> datasets</span>
 <span id="cb8-2"><a href=""></a><span class="im">from</span> torchvision.transforms <span class="im">import</span> ToTensor</span>
 <span id="cb8-3"><a href=""></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -476,7 +476,7 @@ Image size: torch.Size([3, 32, 32])</code></pre>
 <img data-src="2_modelfitting_files/figure-revealjs/cell-6-output-2.png" class="r-stretch"></section>
 <section id="data-loader" class="slide level2">
 <h2>Data Loader</h2>
-<div id="b63acbfe" class="cell" data-execution_count="6">
+<div id="a28c8b02" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href=""></a><span class="im">from</span> torch.utils.data <span class="im">import</span> DataLoader</span>
 <span id="cb10-2"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb10-3"><a href=""></a><span class="im">import</span> random</span>
@@ -504,7 +504,7 @@ Image size: torch.Size([3, 32, 32])</code></pre>
 </section>
 <section id="mini-batch-training-loop-one-optimizer-step-per-batch" class="slide level2">
 <h2>Mini-batch training loop (one optimizer step per batch)</h2>
-<div id="e1e010e9" class="cell" data-execution_count="7">
+<div id="f6f38943" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href=""></a><span class="im">from</span> torch.utils.data <span class="im">import</span> TensorDataset, DataLoader</span>
 <span id="cb11-2"><a href=""></a></span>
 <span id="cb11-3"><a href=""></a><span class="co"># Wrap tensors in a Dataset, then DataLoader</span></span>
@@ -687,6 +687,9 @@ L[x] &amp;= \left(f[x,\phi] - \mathbb{E}[y|x] + \mathbb{E}[y|x] - y[x] \right)^2
 &amp;= \arg\min_{\phi} \sum_{i=1}^I -\log \left( \frac{1}{\sqrt{2\pi\sigma^2}}\right)  +\frac{(y_i-f[x_i,\phi])^2}{2\sigma^2}   \\
 &amp;= \arg\min_{\phi} \sum_{i=1}^I (y_i-f[x_i,\phi])^2
 \end{align*}\]</span></p>
+</section>
+<section id="lin.-reg.-least-squares-loss-1" class="slide level2">
+<h2>Lin. Reg.: Least Squares Loss</h2>
 
 <img data-src="../img/UDL/Chap05/LossNormalRegression.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="heteroscedastic-regression" class="slide level2">
